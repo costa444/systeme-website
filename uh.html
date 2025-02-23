@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo Leveling Quest System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background-image: url('https://staticg.sportskeeda.com/editor/2024/01/6f0fd-17065177859699-1920.jpg'); /* Add your image URL here */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* Full-screen container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Title and entrance message */
+    .title {
+      font-size: 50px;
+      color: #39ff14; /* Neon green effect */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      margin-bottom: 30px;
+    }
+
+    .entrance-message {
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      margin-bottom: 40px;
+    }
+
+    /* Blue decoration effect */
+    .quest {
+      font-size: 24px;
+      background-color: rgba(0, 0, 255, 0.6); /* Blue background */
+      padding: 15px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #39ff14; /* Blue glow effect */
+      transition: transform 0.3s ease;
+    }
+
+    .quest:hover {
+      transform: scale(1.05); /* Slightly enlarge on hover */
+      box-shadow: 0 0 20px #00ffff; /* Bright cyan glow effect */
+    }
+
+    /* Stat bars */
+    .stat-bar {
+      width: 80%;
+      height: 30px;
+      background-color: #333;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .stat-fill {
+      height: 100%;
+      width: 0%; /* Change to simulate progress */
+      background-color: #39ff14;
+      border-radius: 10px;
+      transition: width 1s ease;
+    }
+
+    .stat-title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Button style */
+    .btn {
+      background-color: #39ff14;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background-color: #32d900;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Solo Leveling System</div>
+    <div class="entrance-message">Can you complete these quests and level up?</div>
+    
+    <!-- Quest 1: Physical tasks -->
+    <div class="quest">
+      <strong>Quest 1: Physical Tasks</strong><br>
+      - Do 100 Push-ups<br>
+      - Do 100 Sit-ups<br>
+      - Do 100 Squats<br>
+      - Run 10 km<br>
+      <a href="file:///C:/Users/r0013540/Desktop/learn.javascript/html.html">
+      
+      <button class="btn" onclick="window.location.href=file">Complete Quest</button>
+    </div>
+  </a>
+    <!-- Quest 2: Intellectual tasks -->
+    <div class="quest">
+      <strong>Quest 2: Intellectual Tasks</strong><br>
+      - Study for 1 hour<br>
+      - Play Chess for 30 minutes<br>
+      <a href="file:///C:/Users/r0013540/Desktop/learn.javascript/html.html">
+      <button class="btn" onclick="levelUp('intelligence')">Complete Quest</button>
+    </div>
+  </a>
+  
+    
+    <!-- Stats -->
+    <div class="stat-title">Strength</div>
+    <div class="stat-bar">
+      <div class="stat-fill" id="strength"></div>
+    </div>
+    
+    <div class="stat-title">Intelligence</div>
+    <div class="stat-bar">
+      <div class="stat-fill" id="intelligence"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to simulate leveling up (filling the stat bars)
+    function levelUp(stat) {
+      let statFill = document.getElementById(stat);
+      let currentWidth = parseInt(statFill.style.width) || 0;
+      if (currentWidth < 100) {
+        statFill.style.width = currentWidth + 10 + '%'; // Increase by 10% for each quest completion
+      }
+    }
+  </script>
+</body>
+</html>
+
